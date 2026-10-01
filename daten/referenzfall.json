@@ -1,0 +1,504 @@
+{
+  "format": "kpi-remanufacturing-fall",
+  "version": 1,
+  "beschreibung": "Referenzfall der Masterarbeit, Abschnitt 4.2.4: Kurbelwelle 42CrMo4, 103 kg, Verschleiß, mittlerer Schadensgrad",
+  "fall": {
+    "bauteil": "Kurbelwelle, Sechszylinder-Nutzfahrzeugdieselmotor",
+    "werkstoff": "42CrMo4",
+    "werkstoffklasse": "Baustahl und niedriglegierte Stähle",
+    "schadenstyp": "Verschleiß",
+    "schadensgrad": "mittel",
+    "bauteil_aufbereitbar": true,
+    "ersatzbedarf": true,
+    "neuteil_verfuegbar": true,
+    "tv_intern": 5,
+    "tv_extern": 3,
+    "pf_intern": 4,
+    "pf_extern": 4,
+    "harte_frist": false,
+    "s_tech_ohne_verfahren": 5.0,
+    "eignungstabelle": null
+  },
+  "gewichte": {
+    "technologie": 0.25,
+    "prozess": 0.25,
+    "schadensgrad": 0.25,
+    "werkstoff": 0.25,
+    "tech": 0.3333333333333333,
+    "oekon": 0.3333333333333333,
+    "oekol": 0.3333333333333333
+  },
+  "parameter": {
+    "masse": {
+      "wert": 103.0,
+      "einheit": "kg",
+      "herkunft": "L",
+      "quelle": "Zheng et al. (2019, S. 216 und S. 218)",
+      "spanne": null,
+      "text": ""
+    },
+    "auftrag": {
+      "wert": 1.0,
+      "einheit": "kg",
+      "herkunft": "A",
+      "quelle": "eigene Annahme, Vergleichswert Zheng et al. (2019, S. 214)",
+      "spanne": [
+        0.5,
+        3.1
+      ],
+      "text": ""
+    },
+    "lohn": {
+      "wert": 48.3,
+      "einheit": "€/h",
+      "herkunft": "L",
+      "quelle": "Statistisches Bundesamt, PM 154 vom 30.04.2025",
+      "spanne": null,
+      "text": ""
+    },
+    "strompreis": {
+      "wert": 0.227,
+      "einheit": "€/kWh",
+      "herkunft": "L",
+      "quelle": "Eurostat nrg_pc_205, Band 500 bis 2.000 MWh, 2025",
+      "spanne": null,
+      "text": ""
+    },
+    "msr_auftrag": {
+      "wert": 12.0,
+      "einheit": "€/h",
+      "herkunft": "L",
+      "quelle": "Kokare et al. (2023, Tab. 9)",
+      "spanne": null,
+      "text": ""
+    },
+    "msr_zerspanung": {
+      "wert": 16.0,
+      "einheit": "€/h",
+      "herkunft": "L",
+      "quelle": "Kokare et al. (2023, Tab. 9)",
+      "spanne": null,
+      "text": ""
+    },
+    "drahtpreis": {
+      "wert": 10.37,
+      "einheit": "€/kg",
+      "herkunft": "L",
+      "quelle": "Williams et al. (2016, S. 643), Mitte von 2 bis 15 £/kg, EZB-Kurs 2016",
+      "spanne": [
+        1.2,
+        18.3
+      ],
+      "text": "Untergrenze Priarone et al. (2020, Tab. 6)"
+    },
+    "gaspreis": {
+      "wert": 2.3,
+      "einheit": "€/m³",
+      "herkunft": "L",
+      "quelle": "Kokare et al. (2023, Tab. 9)",
+      "spanne": null,
+      "text": ""
+    },
+    "abscheiderate": {
+      "wert": 0.94,
+      "einheit": "kg/h",
+      "herkunft": "L",
+      "quelle": "Priarone et al. (2020, S. 39)",
+      "spanne": [
+        0.94,
+        3.0
+      ],
+      "text": "Obergrenze Richtwert Williams et al. (2016)"
+    },
+    "mrr_schruppen": {
+      "wert": 11.3,
+      "einheit": "kg/h",
+      "herkunft": "L",
+      "quelle": "Priarone et al. (2020, S. 39), Mitte von 9,4 bis 13,2",
+      "spanne": [
+        9.4,
+        13.2
+      ],
+      "text": ""
+    },
+    "mrr_schlichten": {
+      "wert": 1.6,
+      "einheit": "kg/h",
+      "herkunft": "L",
+      "quelle": "Priarone et al. (2020, S. 39), Mitte von 1,3 bis 1,9",
+      "spanne": [
+        1.3,
+        1.9
+      ],
+      "text": ""
+    },
+    "gk_satz": {
+      "wert": 18.2,
+      "einheit": "€/h",
+      "herkunft": "L",
+      "quelle": "Priarone et al. (2020, S. 39), Mitte von 12,7 bis 23,7",
+      "spanne": [
+        12.7,
+        23.7
+      ],
+      "text": "je Maschinenstunde"
+    },
+    "schrotterloes": {
+      "wert": 0.358,
+      "einheit": "€/kg",
+      "herkunft": "L",
+      "quelle": "Statistisches Bundesamt, GENESIS 51000-0005, WP 7204, 2025",
+      "spanne": null,
+      "text": ""
+    },
+    "neuteilpreis_kg": {
+      "wert": 11.45,
+      "einheit": "€/kg",
+      "herkunft": "L",
+      "quelle": "Eurostat DS-059358, Prodcom 28152230, DE 2024",
+      "spanne": [
+        5.41,
+        16.94
+      ],
+      "text": "Einfuhrwert bis Obergrenze mit Handelsspanne"
+    },
+    "aufschlag": {
+      "wert": 0.06,
+      "einheit": "—",
+      "herkunft": "L",
+      "quelle": "Deutsche Bundesbank (2026, S. 97), Median 5,7 % vom Umsatz",
+      "spanne": [
+        0.021,
+        0.15
+      ],
+      "text": "Obergrenze Gudehus (2010, S. 1003)"
+    },
+    "fracht_sendung": {
+      "wert": 7.2,
+      "einheit": "€/Sendung",
+      "herkunft": "L",
+      "quelle": "Gudehus (2010, S. 967, Tab. 20.2)",
+      "spanne": null,
+      "text": ""
+    },
+    "fracht_palette": {
+      "wert": 19.0,
+      "einheit": "€/Palette",
+      "herkunft": "L",
+      "quelle": "Gudehus (2010, S. 967, Tab. 20.2)",
+      "spanne": null,
+      "text": ""
+    },
+    "fracht_km": {
+      "wert": 0.075,
+      "einheit": "€/(Palette·km)",
+      "herkunft": "L",
+      "quelle": "Gudehus (2010, S. 967, Tab. 20.2)",
+      "spanne": null,
+      "text": ""
+    },
+    "frachtindex": {
+      "wert": 1.452,
+      "einheit": "—",
+      "herkunft": "L",
+      "quelle": "Eurostat sts_sepp_a, H494, 2006 bis 2023",
+      "spanne": null,
+      "text": ""
+    },
+    "entfernung": {
+      "wert": 150.0,
+      "einheit": "km",
+      "herkunft": "A",
+      "quelle": "eigene Annahme, je Richtung",
+      "spanne": [
+        50.0,
+        500.0
+      ],
+      "text": ""
+    },
+    "losgroesse": {
+      "wert": 1.0,
+      "einheit": "Stück",
+      "herkunft": "A",
+      "quelle": "taktische Einzelfallentscheidung (4.1.1)",
+      "spanne": [
+        1.0,
+        84.0
+      ],
+      "text": "Obergrenze Abu et al. (2017)"
+    },
+    "teile_je_palette": {
+      "wert": 1.0,
+      "einheit": "Stück",
+      "herkunft": "A",
+      "quelle": "eigene Annahme",
+      "spanne": null,
+      "text": ""
+    },
+    "t_reinigung": {
+      "wert": 0.25,
+      "einheit": "h",
+      "herkunft": "A",
+      "quelle": "eigene Annahme",
+      "spanne": [
+        0.1,
+        1.0
+      ],
+      "text": ""
+    },
+    "t_pruefung": {
+      "wert": 0.5,
+      "einheit": "h",
+      "herkunft": "A",
+      "quelle": "eigene Annahme, Sicht-, Maß- und Rissprüfung",
+      "spanne": [
+        0.25,
+        1.5
+      ],
+      "text": ""
+    },
+    "t_fremdvergabe": {
+      "wert": 0.5,
+      "einheit": "h",
+      "herkunft": "A",
+      "quelle": "eigene Annahme, Beauftragung und Abnahme",
+      "spanne": [
+        0.25,
+        2.0
+      ],
+      "text": ""
+    },
+    "anteil_endbearbeitung": {
+      "wert": 1.0,
+      "einheit": "—",
+      "herkunft": "A",
+      "quelle": "Obergrenze nach 4.3.2, gesamter Auftrag",
+      "spanne": [
+        0.2,
+        1.0
+      ],
+      "text": ""
+    },
+    "e_draht": {
+      "wert": 3.0,
+      "einheit": "kg CO₂-Äq/kg",
+      "herkunft": "L",
+      "quelle": "ESAB (2025, S. 9)",
+      "spanne": null,
+      "text": ""
+    },
+    "w_auftrag": {
+      "wert": 6.583333333333333,
+      "einheit": "kWh/kg",
+      "herkunft": "L",
+      "quelle": "Priarone et al. (2020, S. 39)",
+      "spanne": [
+        0.522,
+        6.583333333333333
+      ],
+      "text": "Untergrenze Zulfi (2025, S. 9), EPD für MIG/WIG-Massivdrähte, Szenariowert"
+    },
+    "gasmenge": {
+      "wert": 14.0,
+      "einheit": "l/min",
+      "herkunft": "L",
+      "quelle": "Mehmert (2003, S. 22)",
+      "spanne": null,
+      "text": ""
+    },
+    "dichte_argon": {
+      "wert": 1.784,
+      "einheit": "kg/m³",
+      "herkunft": "L",
+      "quelle": "Stoffwert Argon, Normzustand",
+      "spanne": null,
+      "text": ""
+    },
+    "e_argon": {
+      "wert": 0.045,
+      "einheit": "kg CO₂-Äq/kg",
+      "herkunft": "L",
+      "quelle": "ProBAS, Argon-DE-2020 (GEMIS)",
+      "spanne": null,
+      "text": ""
+    },
+    "e_schruppen": {
+      "wert": 0.06,
+      "einheit": "kg CO₂/kg",
+      "herkunft": "L",
+      "quelle": "Priarone et al. (2020, S. 39)",
+      "spanne": null,
+      "text": ""
+    },
+    "e_schlichten": {
+      "wert": 0.27,
+      "einheit": "kg CO₂/kg",
+      "herkunft": "L",
+      "quelle": "Priarone et al. (2020, S. 39)",
+      "spanne": null,
+      "text": ""
+    },
+    "w_reinigung": {
+      "wert": 0.995,
+      "einheit": "kWh/m²",
+      "herkunft": "L",
+      "quelle": "Peng et al. (2015, S. 813)",
+      "spanne": null,
+      "text": ""
+    },
+    "flaeche_reinigung": {
+      "wert": 1.0,
+      "einheit": "m²",
+      "herkunft": "A",
+      "quelle": "eigene Annahme",
+      "spanne": [
+        0.5,
+        2.0
+      ],
+      "text": ""
+    },
+    "f_strom": {
+      "wert": 0.414,
+      "einheit": "kg CO₂-Äq/kWh",
+      "herkunft": "L",
+      "quelle": "Icha und Lauf (2026, S. 16), 2024 vorläufig",
+      "spanne": null,
+      "text": ""
+    },
+    "e_stahl": {
+      "wert": 2.1822,
+      "einheit": "kg CO₂-Äq/kg",
+      "herkunft": "L",
+      "quelle": "ProBAS, Konverterstahl, 2013 (ILCD)",
+      "spanne": [
+        0.5508,
+        2.1822
+      ],
+      "text": "Untergrenze Elektrostahl"
+    },
+    "e_warm": {
+      "wert": 0.20748,
+      "einheit": "kg CO₂-Äq/kg",
+      "herkunft": "L",
+      "quelle": "ProBAS, Warmwalzen, 1997 (ILCD)",
+      "spanne": [
+        0.20748,
+        1.55
+      ],
+      "text": "Obergrenze Schmieden nach Priarone et al. (2020, S. 39)"
+    },
+    "e_schrott": {
+      "wert": 0.03421,
+      "einheit": "kg CO₂-Äq/kg",
+      "herkunft": "L",
+      "quelle": "ProBAS, Eisenschrott, 2012 (ILCD)",
+      "spanne": null,
+      "text": ""
+    },
+    "e_lkw": {
+      "wert": 0.0859,
+      "einheit": "kg CO₂-Äq/tkm",
+      "herkunft": "L",
+      "quelle": "ProBAS, Lkw-Diesel-DE-2020 (GEMIS)",
+      "spanne": [
+        0.047,
+        0.0859
+      ],
+      "text": ""
+    },
+    "ausnutzung": {
+      "wert": 1.3,
+      "einheit": "—",
+      "herkunft": "A",
+      "quelle": "eigene Annahme",
+      "spanne": [
+        1.1,
+        1.6
+      ],
+      "text": ""
+    },
+    "zusatz_co2_aufbereitung": {
+      "wert": 0.0,
+      "einheit": "kg CO₂-Äq",
+      "herkunft": "A",
+      "quelle": "Basisfall ohne Zusatzpositionen (4.3.3)",
+      "spanne": null,
+      "text": ""
+    },
+    "gutschrift_schrott": {
+      "wert": 0.0,
+      "einheit": "kg CO₂-Äq/kg",
+      "herkunft": "A",
+      "quelle": "Cut-off, keine Gutschrift (4.3.3)",
+      "spanne": null,
+      "text": ""
+    },
+    "lieferzeit_intern": {
+      "wert": 0.0,
+      "einheit": "Arbeitstage",
+      "herkunft": "A",
+      "quelle": "Faktorbaustein Verzug, neutral",
+      "spanne": null,
+      "text": ""
+    },
+    "lieferzeit_extern": {
+      "wert": 0.0,
+      "einheit": "Arbeitstage",
+      "herkunft": "A",
+      "quelle": "Faktorbaustein Verzug, neutral",
+      "spanne": null,
+      "text": ""
+    },
+    "lieferzeit_neuteil": {
+      "wert": 0.0,
+      "einheit": "Arbeitstage",
+      "herkunft": "A",
+      "quelle": "Faktorbaustein Verzug, neutral",
+      "spanne": null,
+      "text": ""
+    },
+    "frist": {
+      "wert": 0.0,
+      "einheit": "Arbeitstage",
+      "herkunft": "A",
+      "quelle": "Faktorbaustein Verzug, neutral",
+      "spanne": null,
+      "text": ""
+    },
+    "strafe_tag": {
+      "wert": 0.0,
+      "einheit": "€/Arbeitstag",
+      "herkunft": "A",
+      "quelle": "Faktorbaustein Verzug, neutral",
+      "spanne": null,
+      "text": ""
+    },
+    "stillstand_tag": {
+      "wert": 0.0,
+      "einheit": "€/Arbeitstag",
+      "herkunft": "A",
+      "quelle": "Faktorbaustein Verzug, neutral",
+      "spanne": null,
+      "text": ""
+    },
+    "strafe_max": {
+      "wert": null,
+      "einheit": "€",
+      "herkunft": "A",
+      "quelle": "Obergrenze der Vertragsstrafe, keine",
+      "spanne": null,
+      "text": ""
+    },
+    "ausschuss": {
+      "wert": 0.0,
+      "einheit": "—",
+      "herkunft": "A",
+      "quelle": "Faktorbaustein Ausschussrisiko, neutral",
+      "spanne": [
+        0.0,
+        0.5
+      ],
+      "text": "Aufbereitbarkeitsquote 50 bis 90 % nach Sutherland et al. (2008, S. 7)"
+    }
+  }
+}

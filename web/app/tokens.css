@@ -1,0 +1,215 @@
+/* Design-Tokens (Standard dunkel, umschaltbar).
+   Flächen, Text, Linien, Marke und Status aus dem Supabase-Dashboard (Studio, Open Source,
+   packages/ui: themes/dark.css und light.css, OKLCH-Werte in Hex umgerechnet).
+   Farben der Alternativen und Dimensionen bleiben die der Arbeit (Abbildungen 4 bis 6),
+   im dunklen Theme aufgehellt.
+   Umschaltung über data-theme="light" | "dark" am <html>, ohne Attribut folgt das System. */
+:root {
+  /* Alternativen und Dimensionen (Arbeit) */
+  --alt-intern: #1f4e79;
+  --alt-extern: #7f9fbf;
+  --alt-neuteil: #c0504d;
+  --alt-ausscheiden: #7f7f7f;
+  --dim-tech: #3d6fb6;
+  --dim-oekon: #c2831f;
+  --dim-oekol: #13927c;
+
+  /* Diagramme: Tornado-Farben bewusst nicht in Alternativenblau,
+     damit Unter-/Obergrenze von intern/extern unterscheidbar bleiben. */
+  --tornado-unten: #c4a574;
+  --tornado-oben: #8a5a12;
+  --zelle-intern-text: #ffffff;
+  --zelle-extern-text: #1c1c1c;
+  --markierung: #1c1c1c;
+  --punkt: rgba(0, 0, 0, 0.18);
+
+  /* Supabase hell: neutrales Grau, Flächen werden mit der Ebene heller */
+  --flaeche-seite: #fcfcfc;
+  --flaeche: #ffffff;
+  --flaeche-zweit: #f6f6f6;
+  --flaeche-formel: #f8f8f8;
+  --flaeche-hover: #ededed;
+  --linie: #e4e4e4;
+  --linie-stark: #d4d4d4;
+  --text: #171717;
+  --text-gedaempft: #666666;
+  --text-dritt: #6b6b6b;
+
+  /* Marke (Supabase-Grün) */
+  --primaer: #0e7e4e;
+  --fokus: #0e7e4e;
+  --knopf-bg: #0e7e4e;
+  --knopf-rand: #0b6b42;
+  --knopf-text: #ffffff;
+  --knopf-hover: #0b6b42;
+  --marke-tint: rgba(62, 207, 142, 0.12);
+
+  --schatten-leiste: rgba(0, 0, 0, 0.06);
+  --schatten-menue: rgba(0, 0, 0, 0.10);
+
+  /* Status nach Supabase (brand, warning, destructive) */
+  --status-hinweis-fg: #3f3f3f;
+  --status-hinweis-bg: #f6f6f6;
+  --status-hinweis-rand: #e4e4e4;
+  --status-warnung-fg: #9a5200;
+  --status-warnung-bg: #fff8e6;
+  --status-warnung-rand: #f3ba63;
+  --status-ausschluss-fg: #ca3214;
+  --status-ausschluss-bg: #fff0ee;
+  --status-ausschluss-rand: #f3b0a2;
+  --status-zulaessig-fg: #097c4f;
+  --status-zulaessig-bg: #effcf5;
+  --status-zulaessig-rand: #85e0ba;
+
+  /* Herkunft: L Literatur = Supabase secondary (Violett), A Annahme = neutral, N Nutzerangabe = Marke */
+  --herkunft-l-fg: #5a45e0;
+  --herkunft-l-bg: #f2f0ff;
+  --herkunft-l-rand: #c9c0ff;
+  --herkunft-a-fg: #555555;
+  --herkunft-a-bg: #f3f3f3;
+  --herkunft-a-rand: #d4d4d4;
+  --herkunft-n-fg: #097c4f;
+  --herkunft-n-bg: #effcf5;
+  --herkunft-n-rand: #85e0ba;
+
+  --sidebar-width: 240px;
+  --sidebar-collapsed: 56px;
+  --subnav-width: 220px;
+  --panel-width: 340px;
+  --ergebnisleiste-height: 48px;
+  /* Supabase-Radien: xs 2, sm 4, Knöpfe 6, lg 8 (Karten), xl 16 */
+  --radius: 6px;
+  --radius-karte: 8px;
+  /* Supabase-Dashboard: Inter für alles, Mono für Daten, Labels und Badges */
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "Source Code Pro", ui-monospace, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --alt-intern: #4f8fd6;
+    --alt-extern: #a3bcd6;
+    --alt-neuteil: #e0706c;
+    --alt-ausscheiden: #8e938f;
+    --dim-tech: #5a8ee0;
+    --dim-oekon: #d99a36;
+    --dim-oekol: #2eb397;
+
+    --tornado-unten: #a8863a;
+    --tornado-oben: #e8c47a;
+    --zelle-intern-text: #0d1622;
+    --zelle-extern-text: #0d1622;
+    --markierung: #ecefed;
+    --punkt: rgba(255, 255, 255, 0.16);
+
+    --flaeche-seite: #121413;
+    --flaeche: #181a18;
+    --flaeche-zweit: #1d201e;
+    --flaeche-formel: #1d201e;
+    --flaeche-hover: #232624;
+    --linie: #292c2a;
+    --linie-stark: #3b3e3c;
+    --text: #ecefed;
+    --text-gedaempft: #afb2b0;
+    --text-dritt: #959896;
+
+    --primaer: #3ecf8e;
+    --fokus: #3ecf8e;
+    --knopf-bg: #006239;
+    --knopf-rand: rgba(62, 207, 142, 0.3);
+    --knopf-text: #ecefed;
+    --knopf-hover: #007a47;
+    --marke-tint: rgba(62, 207, 142, 0.10);
+
+    --schatten-leiste: rgba(0, 0, 0, 0.45);
+    --schatten-menue: rgba(0, 0, 0, 0.55);
+
+    --status-hinweis-fg: #cfd2d0;
+    --status-hinweis-bg: #1d201e;
+    --status-hinweis-rand: #292c2a;
+    --status-warnung-fg: #db8e00;
+    --status-warnung-bg: #291900;
+    --status-warnung-rand: #693f05;
+    --status-ausschluss-fg: #f16a50;
+    --status-ausschluss-bg: #1d1412;
+    --status-ausschluss-rand: #7f2315;
+    --status-zulaessig-fg: #3ecf8e;
+    --status-zulaessig-bg: #00311d;
+    --status-zulaessig-rand: #006239;
+
+    --herkunft-l-fg: #a597ff;
+    --herkunft-l-bg: #1c1740;
+    --herkunft-l-rand: #3a2f8a;
+    --herkunft-a-fg: #afb2b0;
+    --herkunft-a-bg: #232624;
+    --herkunft-a-rand: #3b3e3c;
+    --herkunft-n-fg: #3ecf8e;
+    --herkunft-n-bg: #00311d;
+    --herkunft-n-rand: #006239;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --alt-intern: #4f8fd6;
+  --alt-extern: #a3bcd6;
+  --alt-neuteil: #e0706c;
+  --alt-ausscheiden: #8e938f;
+  --dim-tech: #5a8ee0;
+  --dim-oekon: #d99a36;
+  --dim-oekol: #2eb397;
+
+  --tornado-unten: #a8863a;
+  --tornado-oben: #e8c47a;
+  --zelle-intern-text: #0d1622;
+  --zelle-extern-text: #0d1622;
+  --markierung: #ecefed;
+  --punkt: rgba(255, 255, 255, 0.16);
+
+  --flaeche-seite: #121413;
+  --flaeche: #181a18;
+  --flaeche-zweit: #1d201e;
+  --flaeche-formel: #1d201e;
+  --flaeche-hover: #232624;
+  --linie: #292c2a;
+  --linie-stark: #3b3e3c;
+  --text: #ecefed;
+  --text-gedaempft: #afb2b0;
+  --text-dritt: #959896;
+
+  --primaer: #3ecf8e;
+  --fokus: #3ecf8e;
+  --knopf-bg: #006239;
+  --knopf-rand: rgba(62, 207, 142, 0.3);
+  --knopf-text: #ecefed;
+  --knopf-hover: #007a47;
+  --marke-tint: rgba(62, 207, 142, 0.10);
+
+  --schatten-leiste: rgba(0, 0, 0, 0.45);
+  --schatten-menue: rgba(0, 0, 0, 0.55);
+
+  --status-hinweis-fg: #cfd2d0;
+  --status-hinweis-bg: #1d201e;
+  --status-hinweis-rand: #292c2a;
+  --status-warnung-fg: #db8e00;
+  --status-warnung-bg: #291900;
+  --status-warnung-rand: #693f05;
+  --status-ausschluss-fg: #f16a50;
+  --status-ausschluss-bg: #1d1412;
+  --status-ausschluss-rand: #7f2315;
+  --status-zulaessig-fg: #3ecf8e;
+  --status-zulaessig-bg: #00311d;
+  --status-zulaessig-rand: #006239;
+
+  --herkunft-l-fg: #a597ff;
+  --herkunft-l-bg: #1c1740;
+  --herkunft-l-rand: #3a2f8a;
+  --herkunft-a-fg: #afb2b0;
+  --herkunft-a-bg: #232624;
+  --herkunft-a-rand: #3b3e3c;
+  --herkunft-n-fg: #3ecf8e;
+  --herkunft-n-bg: #00311d;
+  --herkunft-n-rand: #006239;
+}

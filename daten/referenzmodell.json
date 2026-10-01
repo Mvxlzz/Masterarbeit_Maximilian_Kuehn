@@ -1,0 +1,1459 @@
+{
+ "format": "kpi-remanufacturing-modell",
+ "version": 2,
+ "modell": {
+  "name": "Referenzfall Kurbelwelle",
+  "stammdaten": {
+   "bauteil": "Kurbelwelle, Sechszylinder-Nutzfahrzeugdieselmotor",
+   "werkstoff": "42CrMo4",
+   "werkstoffklasse": "Baustahl und niedriglegierte Stähle",
+   "schadenstyp": "Verschleiß",
+   "schadensgrad": "mittel"
+  },
+  "gate": {
+   "bauteil_aufbereitbar": true,
+   "ersatzbedarf": true,
+   "neuteil_verfuegbar": true
+  },
+  "alternativen": [
+   {
+    "schluessel": "intern",
+    "name": "Interne Wiederaufbereitung",
+    "art": "aufbereitung",
+    "aktiv": true
+   },
+   {
+    "schluessel": "extern",
+    "name": "Externe Wiederaufbereitung",
+    "art": "aufbereitung",
+    "aktiv": true
+   },
+   {
+    "schluessel": "neuteil",
+    "name": "Neuteilersatz",
+    "art": "neuteil",
+    "aktiv": true
+   },
+   {
+    "schluessel": "ausscheiden",
+    "name": "Ausscheiden",
+    "art": "ausscheiden",
+    "aktiv": true
+   }
+  ],
+  "felder": [
+   {
+    "name": "masse",
+    "bezeichnung": "Masse des Bauteils",
+    "wert": 103.0,
+    "einheit": "kg",
+    "herkunft": "L",
+    "quelle": "Zheng et al. (2019, S. 216 und S. 218)",
+    "spanne": null,
+    "gruppe": "Bauteil und Auftrag",
+    "text": ""
+   },
+   {
+    "name": "auftragsmasse",
+    "bezeichnung": "Auftragsmasse des Zusatzwerkstoffs je Bauteil",
+    "wert": 1.0,
+    "einheit": "kg",
+    "herkunft": "A",
+    "quelle": "eigene Annahme, Vergleichswert Zheng et al. (2019, S. 214)",
+    "spanne": [
+     0.5,
+     3.1
+    ],
+    "gruppe": "Bauteil und Auftrag",
+    "text": ""
+   },
+   {
+    "name": "lohn",
+    "bezeichnung": "Lohnsatz",
+    "wert": 48.3,
+    "einheit": "€/h",
+    "herkunft": "L",
+    "quelle": "Statistisches Bundesamt, PM 154 vom 30.04.2025",
+    "spanne": null,
+    "gruppe": "Kostensätze",
+    "text": ""
+   },
+   {
+    "name": "strompreis",
+    "bezeichnung": "Strompreis",
+    "wert": 0.227,
+    "einheit": "€/kWh",
+    "herkunft": "L",
+    "quelle": "Eurostat nrg_pc_205, Band 500 bis 2.000 MWh, 2025",
+    "spanne": null,
+    "gruppe": "Kostensätze",
+    "text": ""
+   },
+   {
+    "name": "msr_auftrag",
+    "bezeichnung": "Maschinenstundensatz Materialauftrag",
+    "wert": 12.0,
+    "einheit": "€/h",
+    "herkunft": "L",
+    "quelle": "Kokare et al. (2023, Tab. 9)",
+    "spanne": null,
+    "gruppe": "Kostensätze",
+    "text": ""
+   },
+   {
+    "name": "msr_zerspanung",
+    "bezeichnung": "Maschinenstundensatz Zerspanung",
+    "wert": 16.0,
+    "einheit": "€/h",
+    "herkunft": "L",
+    "quelle": "Kokare et al. (2023, Tab. 9)",
+    "spanne": null,
+    "gruppe": "Kostensätze",
+    "text": ""
+   },
+   {
+    "name": "drahtpreis",
+    "bezeichnung": "Preis Zusatzwerkstoff",
+    "wert": 10.37,
+    "einheit": "€/kg",
+    "herkunft": "L",
+    "quelle": "Williams et al. (2016, S. 643), Mitte von 2 bis 15 £/kg, EZB-Kurs 2016",
+    "spanne": [
+     1.2,
+     18.3
+    ],
+    "gruppe": "Preise",
+    "text": "Untergrenze Priarone et al. (2020, Tab. 6)"
+   },
+   {
+    "name": "gaspreis",
+    "bezeichnung": "Preis Schutzgas",
+    "wert": 2.3,
+    "einheit": "€/m³",
+    "herkunft": "L",
+    "quelle": "Kokare et al. (2023, Tab. 9)",
+    "spanne": null,
+    "gruppe": "Preise",
+    "text": ""
+   },
+   {
+    "name": "abscheiderate",
+    "bezeichnung": "Abscheiderate",
+    "wert": 0.94,
+    "einheit": "kg/h",
+    "herkunft": "L",
+    "quelle": "Priarone et al. (2020, S. 39)",
+    "spanne": [
+     0.94,
+     3.0
+    ],
+    "gruppe": "Prozessdaten",
+    "text": "Obergrenze Richtwert Williams et al. (2016)"
+   },
+   {
+    "name": "mrr_schruppen",
+    "bezeichnung": "Zeitspanungsrate Schruppen",
+    "wert": 11.3,
+    "einheit": "kg/h",
+    "herkunft": "L",
+    "quelle": "Priarone et al. (2020, S. 39), Mitte von 9,4 bis 13,2",
+    "spanne": [
+     9.4,
+     13.2
+    ],
+    "gruppe": "Prozessdaten",
+    "text": ""
+   },
+   {
+    "name": "mrr_schlichten",
+    "bezeichnung": "Zeitspanungsrate Schlichten",
+    "wert": 1.6,
+    "einheit": "kg/h",
+    "herkunft": "L",
+    "quelle": "Priarone et al. (2020, S. 39), Mitte von 1,3 bis 1,9",
+    "spanne": [
+     1.3,
+     1.9
+    ],
+    "gruppe": "Prozessdaten",
+    "text": ""
+   },
+   {
+    "name": "gk_satz",
+    "bezeichnung": "Gemeinkostensatz",
+    "wert": 18.2,
+    "einheit": "€/h",
+    "herkunft": "L",
+    "quelle": "Priarone et al. (2020, S. 39), Mitte von 12,7 bis 23,7",
+    "spanne": [
+     12.7,
+     23.7
+    ],
+    "gruppe": "Kostensätze",
+    "text": "je Maschinenstunde"
+   },
+   {
+    "name": "schrotterloes",
+    "bezeichnung": "Schrotterlös",
+    "wert": 0.358,
+    "einheit": "€/kg",
+    "herkunft": "L",
+    "quelle": "Statistisches Bundesamt, GENESIS 51000-0005, WP 7204, 2025",
+    "spanne": null,
+    "gruppe": "Preise",
+    "text": ""
+   },
+   {
+    "name": "neuteilpreis_kg",
+    "bezeichnung": "Neuteilpreis",
+    "wert": 11.45,
+    "einheit": "€/kg",
+    "herkunft": "L",
+    "quelle": "Eurostat DS-059358, Prodcom 28152230, DE 2024",
+    "spanne": [
+     5.41,
+     16.94
+    ],
+    "gruppe": "Preise",
+    "text": "Einfuhrwert bis Obergrenze mit Handelsspanne"
+   },
+   {
+    "name": "aufschlag",
+    "bezeichnung": "Aufschlag des Dienstleisters",
+    "wert": 0.06,
+    "einheit": "—",
+    "herkunft": "L",
+    "quelle": "Deutsche Bundesbank (2026, S. 97), Median 5,7 % vom Umsatz",
+    "spanne": [
+     0.021,
+     0.15
+    ],
+    "gruppe": "Preise",
+    "text": "Obergrenze Gudehus (2010, S. 1003)"
+   },
+   {
+    "name": "fracht_sendung",
+    "bezeichnung": "Frachtpreis je Sendung",
+    "wert": 7.2,
+    "einheit": "€/Sendung",
+    "herkunft": "L",
+    "quelle": "Gudehus (2010, S. 967, Tab. 20.2)",
+    "spanne": null,
+    "gruppe": "Transport",
+    "text": ""
+   },
+   {
+    "name": "fracht_palette",
+    "bezeichnung": "Frachtpreis je Palette",
+    "wert": 19.0,
+    "einheit": "€/Palette",
+    "herkunft": "L",
+    "quelle": "Gudehus (2010, S. 967, Tab. 20.2)",
+    "spanne": null,
+    "gruppe": "Transport",
+    "text": ""
+   },
+   {
+    "name": "fracht_km",
+    "bezeichnung": "Frachtpreis je Palette und Kilometer",
+    "wert": 0.075,
+    "einheit": "€/(Palette·km)",
+    "herkunft": "L",
+    "quelle": "Gudehus (2010, S. 967, Tab. 20.2)",
+    "spanne": null,
+    "gruppe": "Transport",
+    "text": ""
+   },
+   {
+    "name": "frachtindex",
+    "bezeichnung": "Preisindex Fracht 2006 bis 2023",
+    "wert": 1.452,
+    "einheit": "—",
+    "herkunft": "L",
+    "quelle": "Eurostat sts_sepp_a, H494, 2006 bis 2023",
+    "spanne": null,
+    "gruppe": "Transport",
+    "text": ""
+   },
+   {
+    "name": "entfernung",
+    "bezeichnung": "Transportentfernung je Richtung",
+    "wert": 150.0,
+    "einheit": "km",
+    "herkunft": "A",
+    "quelle": "eigene Annahme, je Richtung",
+    "spanne": [
+     50.0,
+     500.0
+    ],
+    "gruppe": "Transport",
+    "text": ""
+   },
+   {
+    "name": "losgroesse",
+    "bezeichnung": "Losgröße",
+    "wert": 1.0,
+    "einheit": "Stück",
+    "herkunft": "A",
+    "quelle": "taktische Einzelfallentscheidung (4.1.1)",
+    "spanne": [
+     1.0,
+     84.0
+    ],
+    "gruppe": "Bauteil und Auftrag",
+    "text": "Obergrenze Abu et al. (2017)"
+   },
+   {
+    "name": "teile_je_palette",
+    "bezeichnung": "Teile je Palette",
+    "wert": 1.0,
+    "einheit": "Stück",
+    "herkunft": "A",
+    "quelle": "eigene Annahme",
+    "spanne": null,
+    "gruppe": "Transport",
+    "text": ""
+   },
+   {
+    "name": "t_reinigung",
+    "bezeichnung": "Dauer Reinigung",
+    "wert": 0.25,
+    "einheit": "h",
+    "herkunft": "A",
+    "quelle": "eigene Annahme",
+    "spanne": [
+     0.1,
+     1.0
+    ],
+    "gruppe": "Prozessdaten",
+    "text": ""
+   },
+   {
+    "name": "t_pruefung",
+    "bezeichnung": "Dauer Prüfung",
+    "wert": 0.5,
+    "einheit": "h",
+    "herkunft": "A",
+    "quelle": "eigene Annahme, Sicht-, Maß- und Rissprüfung",
+    "spanne": [
+     0.25,
+     1.5
+    ],
+    "gruppe": "Prozessdaten",
+    "text": ""
+   },
+   {
+    "name": "t_fremdvergabe",
+    "bezeichnung": "Dauer Beauftragung und Abnahme",
+    "wert": 0.5,
+    "einheit": "h",
+    "herkunft": "A",
+    "quelle": "eigene Annahme, Beauftragung und Abnahme",
+    "spanne": [
+     0.25,
+     2.0
+    ],
+    "gruppe": "Prozessdaten",
+    "text": ""
+   },
+   {
+    "name": "anteil_endbearbeitung",
+    "bezeichnung": "Anteil der Endbearbeitung am Auftrag",
+    "wert": 1.0,
+    "einheit": "—",
+    "herkunft": "A",
+    "quelle": "Obergrenze nach 4.3.2, gesamter Auftrag",
+    "spanne": [
+     0.2,
+     1.0
+    ],
+    "gruppe": "Prozessdaten",
+    "text": ""
+   },
+   {
+    "name": "e_draht",
+    "bezeichnung": "Emissionsfaktor Zusatzwerkstoff",
+    "wert": 3.0,
+    "einheit": "kg CO₂-Äq/kg",
+    "herkunft": "L",
+    "quelle": "ESAB (2025, S. 9)",
+    "spanne": null,
+    "gruppe": "Emissionsfaktoren",
+    "text": ""
+   },
+   {
+    "name": "w_auftrag",
+    "bezeichnung": "Strombedarf Materialauftrag",
+    "wert": 6.583333333333333,
+    "einheit": "kWh/kg",
+    "herkunft": "L",
+    "quelle": "Priarone et al. (2020, S. 39)",
+    "spanne": [
+     0.522,
+     6.583333333333333
+    ],
+    "gruppe": "Emissionsfaktoren",
+    "text": "Untergrenze Zulfi (2025, S. 9), EPD für MIG/WIG-Massivdrähte, Szenariowert"
+   },
+   {
+    "name": "gasmenge",
+    "bezeichnung": "Schutzgasmenge",
+    "wert": 14.0,
+    "einheit": "l/min",
+    "herkunft": "L",
+    "quelle": "Mehmert (2003, S. 22)",
+    "spanne": null,
+    "gruppe": "Prozessdaten",
+    "text": ""
+   },
+   {
+    "name": "dichte_argon",
+    "bezeichnung": "Dichte Argon",
+    "wert": 1.784,
+    "einheit": "kg/m³",
+    "herkunft": "L",
+    "quelle": "Stoffwert Argon, Normzustand",
+    "spanne": null,
+    "gruppe": "Emissionsfaktoren",
+    "text": ""
+   },
+   {
+    "name": "e_argon",
+    "bezeichnung": "Emissionsfaktor Argon",
+    "wert": 0.045,
+    "einheit": "kg CO₂-Äq/kg",
+    "herkunft": "L",
+    "quelle": "ProBAS, Argon-DE-2020 (GEMIS)",
+    "spanne": null,
+    "gruppe": "Emissionsfaktoren",
+    "text": ""
+   },
+   {
+    "name": "e_schruppen",
+    "bezeichnung": "Emissionsfaktor Schruppen",
+    "wert": 0.06,
+    "einheit": "kg CO₂/kg",
+    "herkunft": "L",
+    "quelle": "Priarone et al. (2020, S. 39)",
+    "spanne": null,
+    "gruppe": "Emissionsfaktoren",
+    "text": ""
+   },
+   {
+    "name": "e_schlichten",
+    "bezeichnung": "Emissionsfaktor Schlichten",
+    "wert": 0.27,
+    "einheit": "kg CO₂/kg",
+    "herkunft": "L",
+    "quelle": "Priarone et al. (2020, S. 39)",
+    "spanne": null,
+    "gruppe": "Emissionsfaktoren",
+    "text": ""
+   },
+   {
+    "name": "w_reinigung",
+    "bezeichnung": "Strombedarf Reinigung",
+    "wert": 0.995,
+    "einheit": "kWh/m²",
+    "herkunft": "L",
+    "quelle": "Peng et al. (2015, S. 813)",
+    "spanne": null,
+    "gruppe": "Emissionsfaktoren",
+    "text": ""
+   },
+   {
+    "name": "flaeche_reinigung",
+    "bezeichnung": "Gereinigte Oberfläche",
+    "wert": 1.0,
+    "einheit": "m²",
+    "herkunft": "A",
+    "quelle": "eigene Annahme",
+    "spanne": [
+     0.5,
+     2.0
+    ],
+    "gruppe": "Prozessdaten",
+    "text": ""
+   },
+   {
+    "name": "f_strom",
+    "bezeichnung": "Emissionsfaktor Strom",
+    "wert": 0.414,
+    "einheit": "kg CO₂-Äq/kWh",
+    "herkunft": "L",
+    "quelle": "Icha und Lauf (2026, S. 16), 2024 vorläufig",
+    "spanne": null,
+    "gruppe": "Emissionsfaktoren",
+    "text": ""
+   },
+   {
+    "name": "e_stahl",
+    "bezeichnung": "Emissionsfaktor Stahl",
+    "wert": 2.1822,
+    "einheit": "kg CO₂-Äq/kg",
+    "herkunft": "L",
+    "quelle": "ProBAS, Konverterstahl, 2013 (ILCD)",
+    "spanne": [
+     0.5508,
+     2.1822
+    ],
+    "gruppe": "Emissionsfaktoren",
+    "text": "Untergrenze Elektrostahl"
+   },
+   {
+    "name": "e_warm",
+    "bezeichnung": "Emissionsfaktor Warmumformung",
+    "wert": 0.20748,
+    "einheit": "kg CO₂-Äq/kg",
+    "herkunft": "L",
+    "quelle": "ProBAS, Warmwalzen, 1997 (ILCD)",
+    "spanne": [
+     0.20748,
+     1.55
+    ],
+    "gruppe": "Emissionsfaktoren",
+    "text": "Obergrenze Schmieden nach Priarone et al. (2020, S. 39)"
+   },
+   {
+    "name": "e_schrott",
+    "bezeichnung": "Emissionsfaktor Schrottentsorgung",
+    "wert": 0.03421,
+    "einheit": "kg CO₂-Äq/kg",
+    "herkunft": "L",
+    "quelle": "ProBAS, Eisenschrott, 2012 (ILCD)",
+    "spanne": null,
+    "gruppe": "Emissionsfaktoren",
+    "text": ""
+   },
+   {
+    "name": "e_lkw",
+    "bezeichnung": "Emissionsfaktor Lkw",
+    "wert": 0.0859,
+    "einheit": "kg CO₂-Äq/tkm",
+    "herkunft": "L",
+    "quelle": "ProBAS, Lkw-Diesel-DE-2020 (GEMIS)",
+    "spanne": [
+     0.047,
+     0.0859
+    ],
+    "gruppe": "Emissionsfaktoren",
+    "text": ""
+   },
+   {
+    "name": "ausnutzung",
+    "bezeichnung": "Ausnutzungsfaktor Neuteil",
+    "wert": 1.3,
+    "einheit": "—",
+    "herkunft": "A",
+    "quelle": "eigene Annahme",
+    "spanne": [
+     1.1,
+     1.6
+    ],
+    "gruppe": "Emissionsfaktoren",
+    "text": ""
+   },
+   {
+    "name": "gutschrift_schrott",
+    "bezeichnung": "Gutschrift Schrott (vermiedene Last)",
+    "wert": 0.0,
+    "einheit": "kg CO₂-Äq/kg",
+    "herkunft": "A",
+    "quelle": "Cut-off, keine Gutschrift (4.3.3)",
+    "spanne": null,
+    "gruppe": "Emissionsfaktoren",
+    "text": ""
+   },
+   {
+    "name": "lieferzeit_intern",
+    "bezeichnung": "Lieferzeit interne Wiederaufbereitung",
+    "wert": 0.0,
+    "einheit": "Arbeitstage",
+    "herkunft": "A",
+    "quelle": "Faktorbaustein Verzug, neutral",
+    "spanne": null,
+    "gruppe": "Einflussfaktoren",
+    "text": ""
+   },
+   {
+    "name": "lieferzeit_extern",
+    "bezeichnung": "Lieferzeit externe Wiederaufbereitung",
+    "wert": 0.0,
+    "einheit": "Arbeitstage",
+    "herkunft": "A",
+    "quelle": "Faktorbaustein Verzug, neutral",
+    "spanne": null,
+    "gruppe": "Einflussfaktoren",
+    "text": ""
+   },
+   {
+    "name": "lieferzeit_neuteil",
+    "bezeichnung": "Lieferzeit Neuteil",
+    "wert": 0.0,
+    "einheit": "Arbeitstage",
+    "herkunft": "A",
+    "quelle": "Faktorbaustein Verzug, neutral",
+    "spanne": null,
+    "gruppe": "Einflussfaktoren",
+    "text": ""
+   },
+   {
+    "name": "frist",
+    "bezeichnung": "Frist",
+    "wert": 0.0,
+    "einheit": "Arbeitstage",
+    "herkunft": "A",
+    "quelle": "Faktorbaustein Verzug, neutral",
+    "spanne": null,
+    "gruppe": "Einflussfaktoren",
+    "text": ""
+   },
+   {
+    "name": "strafe_tag",
+    "bezeichnung": "Vertragsstrafe je Arbeitstag",
+    "wert": 0.0,
+    "einheit": "€/Arbeitstag",
+    "herkunft": "A",
+    "quelle": "Faktorbaustein Verzug, neutral",
+    "spanne": null,
+    "gruppe": "Einflussfaktoren",
+    "text": ""
+   },
+   {
+    "name": "stillstand_tag",
+    "bezeichnung": "Stillstandskosten je Arbeitstag",
+    "wert": 0.0,
+    "einheit": "€/Arbeitstag",
+    "herkunft": "A",
+    "quelle": "Faktorbaustein Verzug, neutral",
+    "spanne": null,
+    "gruppe": "Einflussfaktoren",
+    "text": ""
+   },
+   {
+    "name": "strafe_max",
+    "bezeichnung": "Obergrenze der Vertragsstrafe",
+    "wert": null,
+    "einheit": "€",
+    "herkunft": "A",
+    "quelle": "Obergrenze der Vertragsstrafe, keine",
+    "spanne": null,
+    "gruppe": "Einflussfaktoren",
+    "text": ""
+   },
+   {
+    "name": "ausschuss",
+    "bezeichnung": "Ausschussrisiko der Wiederaufbereitung",
+    "wert": 0.0,
+    "einheit": "—",
+    "herkunft": "A",
+    "quelle": "Faktorbaustein Ausschussrisiko, neutral",
+    "spanne": [
+     0.0,
+     0.5
+    ],
+    "gruppe": "Einflussfaktoren",
+    "text": "Aufbereitbarkeitsquote 50 bis 90 % nach Sutherland et al. (2008, S. 7)"
+   }
+  ],
+  "hilfsgroessen": [
+   {
+    "name": "t_vorbereitung",
+    "bezeichnung": "Zeit spanende Vorbereitung",
+    "formel": "auftragsmasse / mrr_schruppen",
+    "einheit": "h",
+    "gruppe": "Zwischengrößen"
+   },
+   {
+    "name": "t_auftrag",
+    "bezeichnung": "Zeit Materialauftrag",
+    "formel": "auftragsmasse / abscheiderate",
+    "einheit": "h",
+    "gruppe": "Zwischengrößen"
+   },
+   {
+    "name": "t_endbearbeitung",
+    "bezeichnung": "Zeit spanende Endbearbeitung",
+    "formel": "auftragsmasse * anteil_endbearbeitung / mrr_schlichten",
+    "einheit": "h",
+    "gruppe": "Zwischengrößen"
+   },
+   {
+    "name": "t_maschine",
+    "bezeichnung": "Maschinenzeit",
+    "formel": "t_vorbereitung + t_endbearbeitung + t_auftrag",
+    "einheit": "h",
+    "gruppe": "Zwischengrößen"
+   },
+   {
+    "name": "gas_m3",
+    "bezeichnung": "Schutzgasverbrauch",
+    "formel": "gasmenge * t_auftrag * 60 / 1000",
+    "einheit": "m³",
+    "gruppe": "Zwischengrößen"
+   },
+   {
+    "name": "argon_kg",
+    "bezeichnung": "Schutzgasmasse",
+    "formel": "gas_m3 * dichte_argon",
+    "einheit": "kg",
+    "gruppe": "Zwischengrößen"
+   },
+   {
+    "name": "strom_kwh",
+    "bezeichnung": "Strombedarf Wiederaufbereitung",
+    "formel": "auftragsmasse * w_auftrag + flaeche_reinigung * w_reinigung",
+    "einheit": "kWh",
+    "gruppe": "Zwischengrößen"
+   },
+   {
+    "name": "fracht_je_teil",
+    "bezeichnung": "Stückgutfracht je Teil und Richtung (Gudehus 2010)",
+    "formel": "(fracht_sendung + aufrunden(losgroesse / teile_je_palette) * (fracht_palette + entfernung * fracht_km)) * frachtindex / losgroesse",
+    "einheit": "€",
+    "gruppe": "Zwischengrößen"
+   },
+   {
+    "name": "rohteil",
+    "bezeichnung": "Masse des Rohteils",
+    "formel": "masse * ausnutzung",
+    "einheit": "kg",
+    "gruppe": "Zwischengrößen"
+   }
+  ],
+  "positionen": [
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Reinigung",
+    "formel": "t_reinigung * lohn",
+    "alternativen": [
+     "intern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Spanende Vorbereitung",
+    "formel": "t_vorbereitung * (lohn + msr_zerspanung)",
+    "alternativen": [
+     "intern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Materialauftrag, Arbeit und Anlage",
+    "formel": "t_auftrag * (lohn + msr_auftrag)",
+    "alternativen": [
+     "intern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Zusatzwerkstoff",
+    "formel": "auftragsmasse * drahtpreis",
+    "alternativen": [
+     "intern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Schutzgas",
+    "formel": "gas_m3 * gaspreis",
+    "alternativen": [
+     "intern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Strom",
+    "formel": "strom_kwh * strompreis",
+    "alternativen": [
+     "intern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Spanende Endbearbeitung",
+    "formel": "t_endbearbeitung * (lohn + msr_zerspanung)",
+    "alternativen": [
+     "intern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Prüfung",
+    "formel": "t_pruefung * lohn",
+    "alternativen": [
+     "intern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Gemeinkosten",
+    "formel": "t_maschine * gk_satz",
+    "alternativen": [
+     "intern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Entgelt des Dienstleisters",
+    "formel": "kosten(\"intern\") * (1 + aufschlag)",
+    "alternativen": [
+     "extern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Transport hin und zurück",
+    "formel": "2 * fracht_je_teil",
+    "alternativen": [
+     "extern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Beauftragung und Abnahme",
+    "formel": "t_fremdvergabe * lohn",
+    "alternativen": [
+     "extern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Einstandspreis",
+    "formel": "masse * neuteilpreis_kg",
+    "alternativen": [
+     "neuteil"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Anliefertransport",
+    "formel": "fracht_je_teil",
+    "alternativen": [
+     "neuteil"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekon",
+    "bezeichnung": "Schrotterlös Altteil",
+    "formel": "-masse * schrotterloes",
+    "alternativen": [
+     "neuteil",
+     "ausscheiden"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekol",
+    "bezeichnung": "Zusatzwerkstoff",
+    "formel": "auftragsmasse * e_draht",
+    "alternativen": [
+     "intern",
+     "extern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekol",
+    "bezeichnung": "Strom für den Materialauftrag",
+    "formel": "auftragsmasse * w_auftrag * f_strom",
+    "alternativen": [
+     "intern",
+     "extern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekol",
+    "bezeichnung": "Schutzgas",
+    "formel": "argon_kg * e_argon",
+    "alternativen": [
+     "intern",
+     "extern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekol",
+    "bezeichnung": "Spanende Vor- und Endbearbeitung",
+    "formel": "auftragsmasse * e_schruppen + auftragsmasse * anteil_endbearbeitung * e_schlichten",
+    "alternativen": [
+     "intern",
+     "extern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekol",
+    "bezeichnung": "Reinigung des Altteils",
+    "formel": "flaeche_reinigung * w_reinigung * f_strom",
+    "alternativen": [
+     "intern",
+     "extern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekol",
+    "bezeichnung": "Transport",
+    "formel": "masse / 1000 * 2 * entfernung * e_lkw",
+    "alternativen": [
+     "extern"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekol",
+    "bezeichnung": "Stahlerzeugung für das Rohteil",
+    "formel": "rohteil * e_stahl",
+    "alternativen": [
+     "neuteil"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekol",
+    "bezeichnung": "Warmumformung",
+    "formel": "rohteil * e_warm",
+    "alternativen": [
+     "neuteil"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekol",
+    "bezeichnung": "Zerspanung des Rohteils",
+    "formel": "(rohteil - masse) * e_schruppen",
+    "alternativen": [
+     "neuteil"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekol",
+    "bezeichnung": "Transport",
+    "formel": "masse / 1000 * entfernung * e_lkw",
+    "alternativen": [
+     "neuteil"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekol",
+    "bezeichnung": "Entsorgung des Altteils",
+    "formel": "masse * e_schrott",
+    "alternativen": [
+     "neuteil",
+     "ausscheiden"
+    ],
+    "gruppe": ""
+   },
+   {
+    "dimension": "oekol",
+    "bezeichnung": "Gutschrift Schrott des Altteils",
+    "formel": "-masse * gutschrift_schrott",
+    "alternativen": [
+     "neuteil",
+     "ausscheiden"
+    ],
+    "gruppe": ""
+   }
+  ],
+  "unterkriterien": [
+   {
+    "schluessel": "technologie",
+    "name": "Technologieverfügbarkeit",
+    "gewicht": 0.25,
+    "stufen": {
+     "intern": 5,
+     "extern": 3
+    },
+    "ableitung": null
+   },
+   {
+    "schluessel": "prozess",
+    "name": "Prozessfähigkeit",
+    "gewicht": 0.25,
+    "stufen": {
+     "intern": 4,
+     "extern": 4
+    },
+    "ableitung": null
+   },
+   {
+    "schluessel": "schadensgrad",
+    "name": "Beherrschbarkeit des Schadensgrads",
+    "gewicht": 0.25,
+    "stufen": {},
+    "ableitung": "schadensgrad"
+   },
+   {
+    "schluessel": "werkstoff",
+    "name": "Werkstoffeignung",
+    "gewicht": 0.25,
+    "stufen": {},
+    "ableitung": "werkstoffeignung"
+   }
+  ],
+  "gewichte": {
+   "tech": 0.3333333333333333,
+   "oekon": 0.3333333333333333,
+   "oekol": 0.3333333333333333
+  },
+  "bausteine": {
+   "lieferzeit": {
+    "intern": "lieferzeit_intern",
+    "extern": "lieferzeit_extern",
+    "neuteil": "lieferzeit_neuteil"
+   },
+   "frist": "frist",
+   "strafe_tag": "strafe_tag",
+   "strafe_max": "strafe_max",
+   "stillstand_tag": "stillstand_tag",
+   "ausschuss": "ausschuss",
+   "rueckfall": "neuteil",
+   "harte_frist": false
+  },
+  "faktoren": [
+   {
+    "schluessel": "lz_engpass",
+    "name": "Lieferengpass Neuteil",
+    "typ": "wertaenderung",
+    "beschreibung": "Neuteil 20 AT, intern 5 AT, extern 8 AT, Frist 10 AT",
+    "setzen": {
+     "lieferzeit_neuteil": 20,
+     "lieferzeit_intern": 5,
+     "lieferzeit_extern": 8,
+     "frist": 10
+    },
+    "skalieren": {},
+    "positionen": [],
+    "einstellungen": {}
+   },
+   {
+    "schluessel": "lz_ausgelastet",
+    "name": "Werkstatt ausgelastet",
+    "typ": "wertaenderung",
+    "beschreibung": "intern 15 AT, extern 8 AT, Neuteil 2 AT, Frist 5 AT",
+    "setzen": {
+     "lieferzeit_neuteil": 2,
+     "lieferzeit_intern": 15,
+     "lieferzeit_extern": 8,
+     "frist": 5
+    },
+    "skalieren": {},
+    "positionen": [],
+    "einstellungen": {}
+   },
+   {
+    "schluessel": "strafe",
+    "name": "Vertragsstrafe nach VDMA",
+    "typ": "wertaenderung",
+    "beschreibung": "100 € je Arbeitstag, entspricht einem Auftragswert von 100.000 €, Obergrenze 5.000 €",
+    "setzen": {
+     "strafe_tag": 100,
+     "strafe_max": 5000
+    },
+    "skalieren": {},
+    "positionen": [],
+    "einstellungen": {}
+   },
+   {
+    "schluessel": "frist_hart",
+    "name": "Frist als Ausschlusskriterium",
+    "typ": "einstellung",
+    "beschreibung": "Alternativen mit Lieferzeit über der Frist scheiden aus",
+    "setzen": {},
+    "skalieren": {},
+    "positionen": [],
+    "einstellungen": {
+     "harte_frist": 1
+    }
+   },
+   {
+    "schluessel": "frist_8",
+    "name": "Frist 8 Arbeitstage",
+    "typ": "wertaenderung",
+    "beschreibung": "",
+    "setzen": {
+     "frist": 8
+    },
+    "skalieren": {},
+    "positionen": [],
+    "einstellungen": {}
+   },
+   {
+    "schluessel": "ausschuss_50",
+    "name": "Ausschussrisiko 50 %",
+    "typ": "wertaenderung",
+    "beschreibung": "Aufbereitbarkeitsquote 50 % nach Sutherland et al. (2008, S. 7)",
+    "setzen": {
+     "ausschuss": 0.5
+    },
+    "skalieren": {},
+    "positionen": [],
+    "einstellungen": {}
+   },
+   {
+    "schluessel": "neuteil_weg",
+    "name": "Neuteil nicht lieferbar",
+    "typ": "einstellung",
+    "beschreibung": "",
+    "setzen": {},
+    "skalieren": {},
+    "positionen": [],
+    "einstellungen": {
+     "neuteil_verfuegbar": 0
+    }
+   },
+   {
+    "schluessel": "vermiedene_last",
+    "name": "Vermiedene Last statt Cut-off",
+    "typ": "wertaenderung",
+    "beschreibung": "Gutschrift 1,6314 kg CO₂-Äq je kg Schrott",
+    "setzen": {
+     "gutschrift_schrott": 1.6314
+    },
+    "skalieren": {},
+    "positionen": [],
+    "einstellungen": {}
+   },
+   {
+    "schluessel": "elektrostahl",
+    "name": "Neuteil aus Elektrostahl",
+    "typ": "wertaenderung",
+    "beschreibung": "Elektrolichtbogenofen statt Konverter",
+    "setzen": {
+     "e_stahl": 0.5508
+    },
+    "skalieren": {},
+    "positionen": [],
+    "einstellungen": {}
+   },
+   {
+    "schluessel": "zusatzpositionen",
+    "name": "Zusatzpositionen der Wiederaufbereitung",
+    "typ": "zuschlag",
+    "beschreibung": "Obergrenzen aus Abschnitt 4.3.3",
+    "setzen": {},
+    "skalieren": {},
+    "positionen": [
+     {
+      "dimension": "oekol",
+      "bezeichnung": "Schleifen statt Schlichten",
+      "formel": "3.9 - 1.0 * 0.27",
+      "alternativen": [
+       "intern",
+       "extern"
+      ],
+      "gruppe": ""
+     },
+     {
+      "dimension": "oekol",
+      "bezeichnung": "Wärmebehandlung, elektrisch 124 MJ",
+      "formel": "124 / 3.6 * 0.414",
+      "alternativen": [
+       "intern",
+       "extern"
+      ],
+      "gruppe": ""
+     },
+     {
+      "dimension": "oekol",
+      "bezeichnung": "Thermische Vorbehandlung, 5,6 kg Diesel",
+      "formel": "5.6 * 44 / 12",
+      "alternativen": [
+       "intern",
+       "extern"
+      ],
+      "gruppe": ""
+     }
+    ],
+    "einstellungen": {}
+   },
+   {
+    "schluessel": "konvention",
+    "name": "Neuteil technisch auf unterster Stufe",
+    "typ": "einstellung",
+    "beschreibung": "Prüfung der Konvention aus Abschnitt 4.3.1",
+    "setzen": {},
+    "skalieren": {},
+    "positionen": [],
+    "einstellungen": {
+     "s_tech_ohne_verfahren": 1
+    }
+   },
+   {
+    "schluessel": "ungunst",
+    "name": "Alle Spannen ungünstig für intern",
+    "typ": "wertaenderung",
+    "beschreibung": "Jede Spanne an der für die interne Wiederaufbereitung ungünstigen Grenze",
+    "setzen": {
+     "auftragsmasse": 3.1,
+     "drahtpreis": 18.3,
+     "abscheiderate": 0.94,
+     "mrr_schruppen": 9.4,
+     "mrr_schlichten": 1.3,
+     "gk_satz": 23.7,
+     "neuteilpreis_kg": 5.41,
+     "aufschlag": 0.021,
+     "entfernung": 50.0,
+     "losgroesse": 84.0,
+     "t_reinigung": 1.0,
+     "t_pruefung": 1.5,
+     "t_fremdvergabe": 0.25,
+     "anteil_endbearbeitung": 1.0,
+     "w_auftrag": 6.583333333333333,
+     "flaeche_reinigung": 2.0,
+     "e_stahl": 0.5508,
+     "e_warm": 0.20748,
+     "e_lkw": 0.047,
+     "ausnutzung": 1.1,
+     "ausschuss": 0.5
+    },
+    "skalieren": {},
+    "positionen": [],
+    "einstellungen": {}
+   }
+  ],
+  "szenarien": [
+   {
+    "schluessel": "S0",
+    "name": "Referenzfall",
+    "faktoren": [],
+    "gewichte": null,
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S1",
+    "name": "Lieferengpass Neuteil",
+    "faktoren": [
+     "lz_engpass",
+     "strafe"
+    ],
+    "gewichte": null,
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S2",
+    "name": "Werkstatt ausgelastet",
+    "faktoren": [
+     "lz_ausgelastet",
+     "strafe"
+    ],
+    "gewichte": null,
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S3a",
+    "name": "Harte Frist 5 AT",
+    "faktoren": [
+     "lz_ausgelastet",
+     "frist_hart"
+    ],
+    "gewichte": null,
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S3b",
+    "name": "Harte Frist 8 AT",
+    "faktoren": [
+     "lz_ausgelastet",
+     "frist_8",
+     "frist_hart"
+    ],
+    "gewichte": null,
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S4",
+    "name": "Ausschussrisiko",
+    "faktoren": [
+     "ausschuss_50"
+    ],
+    "gewichte": null,
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S5",
+    "name": "Ausschussrisiko und Verzug",
+    "faktoren": [
+     "ausschuss_50",
+     "lz_ausgelastet",
+     "strafe"
+    ],
+    "gewichte": null,
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S6",
+    "name": "Neuteil nicht lieferbar",
+    "faktoren": [
+     "neuteil_weg"
+    ],
+    "gewichte": null,
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S7a",
+    "name": "CO₂-Kostensatz 350 €/t",
+    "faktoren": [],
+    "gewichte": {
+     "tech": 0.3333333333333333,
+     "oekon": 0.5997405333175804,
+     "oekol": 0.06692613334908638
+    },
+    "beschreibung": "Umweltbundesamt, 1 % Zeitpräferenz (Eser et al. 2025, S. 10–11)"
+   },
+   {
+    "schluessel": "S7b",
+    "name": "CO₂-Kostensatz 1.000 €/t",
+    "faktoren": [],
+    "gewichte": {
+     "tech": 0.3333333333333333,
+     "oekon": 0.5054971228704707,
+     "oekol": 0.16116954379619608
+    },
+    "beschreibung": "Umweltbundesamt, 0 % Zeitpräferenz (Eser et al. 2025, S. 10–11)"
+   },
+   {
+    "schluessel": "S8a",
+    "name": "Kostenbetont",
+    "faktoren": [],
+    "gewichte": {
+     "tech": 0.2,
+     "oekon": 0.6,
+     "oekol": 0.2
+    },
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S8b",
+    "name": "Ökologiebetont",
+    "faktoren": [],
+    "gewichte": {
+     "tech": 0.2,
+     "oekon": 0.2,
+     "oekol": 0.6
+    },
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S8c",
+    "name": "Technikbetont",
+    "faktoren": [],
+    "gewichte": {
+     "tech": 0.6,
+     "oekon": 0.2,
+     "oekol": 0.2
+    },
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S9a",
+    "name": "Vermiedene Last",
+    "faktoren": [
+     "vermiedene_last"
+    ],
+    "gewichte": null,
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S9b",
+    "name": "Neuteil aus Recyclingstahl",
+    "faktoren": [
+     "elektrostahl"
+    ],
+    "gewichte": null,
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S9c",
+    "name": "Zusatzpositionen der Wiederaufbereitung",
+    "faktoren": [
+     "zusatzpositionen"
+    ],
+    "gewichte": null,
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S10",
+    "name": "Technische Konvention",
+    "faktoren": [
+     "konvention"
+    ],
+    "gewichte": null,
+    "beschreibung": ""
+   },
+   {
+    "schluessel": "S11",
+    "name": "Ungünstigste Kombination",
+    "faktoren": [
+     "ungunst"
+    ],
+    "gewichte": null,
+    "beschreibung": ""
+   }
+  ],
+  "s_tech_ohne_verfahren": 5.0,
+  "eignung": {
+   "Verschleiß": [
+    4,
+    3,
+    2,
+    4,
+    3
+   ],
+   "Korrosion": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "Maßabweichung": [
+    5,
+    3,
+    2,
+    5,
+    3
+   ],
+   "Bruch und Riss": [
+    2,
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  "werkstoffklassen": [
+   "Baustahl und niedriglegierte Stähle",
+   "Hochlegierte Stähle und Werkzeugstähle",
+   "Gusseisen",
+   "Aluminiumlegierungen",
+   "Titan- und Nickelbasislegierungen"
+  ],
+  "schadensgrad_score": {
+   "niedrig": 4,
+   "mittel": 3,
+   "hoch": 2,
+   "kritisch": 1
+  },
+  "beschreibung": "Referenzfall aus Kapitel 4 der Masterarbeit: Kurbelwelle eines Sechszylinder-Nutzfahrzeugdieselmotors, Verschleiß mittleren Grades."
+ }
+}

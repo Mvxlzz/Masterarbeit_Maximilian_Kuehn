@@ -1,0 +1,176 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "./tokens.css";
+
+@custom-variant dark (&:is([data-theme="dark"] *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--dim-oekol);
+  --color-chart-4: var(--dim-oekon);
+  --color-chart-3: var(--dim-tech);
+  --color-chart-2: var(--alt-extern);
+  --color-chart-1: var(--alt-intern);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/*
+ * shadcn/ui-Variablen auf die Design-Tokens (app/tokens.css) abgebildet.
+ * tokens.css schaltet Hell/Dunkel bereits über [data-theme] am <html> um (next-themes,
+ * attribute="data-theme"), darum reicht eine Zuordnung für beide Zustände.
+ */
+:root {
+  --background: var(--flaeche-seite);
+  --foreground: var(--text);
+  --card: var(--flaeche);
+  --card-foreground: var(--text);
+  --popover: var(--flaeche);
+  --popover-foreground: var(--text);
+  --primary: var(--primaer);
+  --primary-foreground: var(--knopf-text);
+  --secondary: var(--flaeche-zweit);
+  --secondary-foreground: var(--text);
+  --muted: var(--flaeche-zweit);
+  --muted-foreground: var(--text-gedaempft);
+  --accent: var(--flaeche-hover);
+  --accent-foreground: var(--text);
+  --destructive: var(--status-ausschluss-fg);
+  --border: var(--linie);
+  --input: var(--linie);
+  --ring: var(--fokus);
+  --radius: var(--radius-karte);
+  --sidebar: var(--flaeche-zweit);
+  --sidebar-foreground: var(--text);
+  --sidebar-primary: var(--primaer);
+  --sidebar-primary-foreground: var(--knopf-text);
+  --sidebar-accent: var(--flaeche-hover);
+  --sidebar-accent-foreground: var(--text);
+  --sidebar-border: var(--linie);
+  --sidebar-ring: var(--fokus);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-variant-numeric: tabular-nums;
+  }
+  html {
+    @apply font-sans;
+  }
+  /* Fließtext-Absätze im Blocksatz mit deutscher Silbentrennung (lang="de"), damit keine großen Wortabstände
+     entstehen. Nur an Absätzen mit Zeilenlänge in ch, nicht in schmalen Karten, Tabellen oder zentrierten
+     Leerzuständen. Die letzte Zeile bleibt linksbündig. Klasse auch an einem Behälter mehrerer Absätze. */
+  .blocksatz,
+  .blocksatz p {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
+/* Leerzustand (Muster Supabase „Create a file bucket“): gestrichelte Karte, Punktraster, das zu den
+   Rändern ausblendet. */
+.leer-punkte {
+  position: relative;
+  overflow: hidden;
+}
+.leer-punkte::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, var(--punkt) 1px, transparent 1.4px);
+  background-size: 16px 16px;
+  background-position: 8px 8px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 75% at 50% 50%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 60% 75% at 50% 50%, #000 30%, transparent 100%);
+}
+
+/* Landing Page: eine orchestrierte Einblendung beim Laden, der Dimensionsbalken baut sich danach auf.
+   Verzögerung je Element über --verzug. Bei reduzierter Bewegung steht alles sofort. */
+@keyframes landing-auf {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes landing-balken {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.landing-auf {
+  animation: landing-auf 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) var(--verzug, 0s) both;
+}
+.landing-balken {
+  transform-origin: left center;
+  animation: landing-balken 0.55s cubic-bezier(0.3, 0.7, 0.2, 1) var(--verzug, 0s) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .landing-auf,
+  .landing-balken {
+    animation: none;
+  }
+}
+/* Hervorhebung im Titel der Landing Page: Linie in der Markenfarbe, zieht sich nach der Einblendung auf. */
+.landing-unterstrich {
+  background-image: linear-gradient(var(--primaer), var(--primaer));
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 100% 0.09em;
+  animation: landing-linie 0.7s cubic-bezier(0.3, 0.7, 0.2, 1) 0.75s both;
+}
+@keyframes landing-linie {
+  from {
+    background-size: 0% 0.09em;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .landing-unterstrich {
+    animation: none;
+  }
+}
